@@ -10,12 +10,12 @@
 
 | Week | Tier | Hours logged | Entries |
 | --- | --- | --- | --- |
-| Week 1 | Tier 2 | 4.02h | 2 |
+| Week 1 | Tier 2 | 2.02h | 2 |
 
 ## Contents
 
 1. [2026-10-05 — Today I finalized my thoughts for my custom PCB. I am going to make a board that is able to capture IR signals sent from a toy laser gun, translate them, and then out put a master signal to manipulate](#2026-10-05-today-i-finalized-my-thoughts-for-my-custom-pcb-i)
-2. [2026-10-06 — Work session](#2026-10-06-work-session)
+2. [2026-10-06 — Worked on schematic design](#2026-10-06-worked-on-schematic-design)
 
 ## Design
 
@@ -35,8 +35,10 @@ I also designed a logo for my project, Operation M.I.M.I.C.
 
 ![IMG_2939](https://halflife.hackclub-assets.com/hackclub-half-life/sessions/Kyb1R5ebGdRzjWmDUY3hYg1WKrU7khl4/8b0356f7670a621001035bb391118bd679873c5a3b96354afd9a74e8a991d877.png)
 
-### 2026-10-06 — Work session
+### 2026-10-06 — Worked on schematic design
 
-**3.02h**
+**1.02h**
+
+Worked on schematic design
 
 [Timelapse](https://lookout.hackclub.com/api/media/578fcc3f-c6f8-448b-b8c3-0bcb74290be9/video.mp4)
