@@ -14,7 +14,7 @@
 | --- | --- | --- | --- | --- | --- |
 | [I2C White 0.42" inch OLED Display Module](https://www.buydisplay.com/i2c-white-0-42-inch-oled-display-module-72x40-arduino-raspberry-pi) | OLED Display to mount on the PCB to show the menu for M.I.M.I.C. | 2 | $2.95 | $5.90 | [BuyDisplay](https://www.buydisplay.com/i2c-white-0-42-inch-oled-display-module-72x40-arduino-raspberry-pi) |
 | **Parts subtotal** | — | — | — | **$5.90** | — |
-| **Tax & shipping** | — | — | — | **$0.00** | — |
-| **Total** | — | — | — | **$5.90** | — |
+| **Tax & shipping** | — | — | — | **$8.37** | — |
+| **Total** | — | — | — | **$14.27** | — |
 
-$59.10 left of the tier's funding.
+$50.73 left of the tier's funding.
