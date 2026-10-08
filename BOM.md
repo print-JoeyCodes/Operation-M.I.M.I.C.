@@ -15,7 +15,7 @@
 | [I2C White 0.42" inch OLED Display Module](https://www.buydisplay.com/i2c-white-0-42-inch-oled-display-module-72x40-arduino-raspberry-pi) | OLED Display to mount on the PCB to show the menu for M.I.M.I.C. | 2 | $2.95 | $5.90 | [BuyDisplay](https://www.buydisplay.com/i2c-white-0-42-inch-oled-display-module-72x40-arduino-raspberry-pi) |
 | [ESP-32 Dev Board](https://www.amazon.com/ELEGOO-ESP-WROOM-32-Development-Bluetooth-Microcontroller/dp/B0D8T53CQ5/ref=sr_1_3?crid=3BDZHY98DT1CC&dib=eyJ2IjoiMSJ9.w298Scd5FCHe-TUhyW0R1Byo_vFDs4BlPNpeTvozpgjTXUKJSIKqGAnBNGHJUe_x9x331qpQmfIVPYOrFS419Q6RcAPVYZf1QYSYyAxJ4ZM95dIr8YRUNWR7ycYGWJhL-XAUywwTVPg0SkSyzgBhwM-dhV1FiRL28zdoXUl0lvceaQbfwmDuwWGa-0MQb86UIOLi9WiIAetz4a7u-ALLe4NN7WGLWU6sMPrq1Q7yjL4.0Ahug9_ieKKnBf57bgw3vhmyrwJxr4UOH2m0px_TG-I&dib_tag=se&keywords=esp32&qid=1791469447&sprefix=esp32%2Caps%2C172&sr=8-3) | Main computation of the M.I.M.I.C. PCB | 1 | $0.00 | $0.00 | [ELEGOO](https://www.amazon.com/ELEGOO-ESP-WROOM-32-Development-Bluetooth-Microcontroller/dp/B0D8T53CQ5/ref=sr_1_3?crid=3BDZHY98DT1CC&dib=eyJ2IjoiMSJ9.w298Scd5FCHe-TUhyW0R1Byo_vFDs4BlPNpeTvozpgjTXUKJSIKqGAnBNGHJUe_x9x331qpQmfIVPYOrFS419Q6RcAPVYZf1QYSYyAxJ4ZM95dIr8YRUNWR7ycYGWJhL-XAUywwTVPg0SkSyzgBhwM-dhV1FiRL28zdoXUl0lvceaQbfwmDuwWGa-0MQb86UIOLi9WiIAetz4a7u-ALLe4NN7WGLWU6sMPrq1Q7yjL4.0Ahug9_ieKKnBf57bgw3vhmyrwJxr4UOH2m0px_TG-I&dib_tag=se&keywords=esp32&qid=1791469447&sprefix=esp32%2Caps%2C172&sr=8-3) |
 | **Parts subtotal** | — | — | — | **$5.90** | — |
-| **Tax & shipping** | — | — | — | **$8.37** | — |
-| **Total** | — | — | — | **$14.27** | — |
+| **Tax & shipping** | — | — | — | **$0.00** | — |
+| **Total** | — | — | — | **$5.90** | — |
 
-$50.73 left of the tier's funding.
+$59.10 left of the tier's funding.
