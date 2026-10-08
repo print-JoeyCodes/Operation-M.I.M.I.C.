@@ -17,7 +17,7 @@
 | [IR LED, Status LED, Power Switch, Capacitors, 2N2222A transistor](https://amazon.com) | IR LED to transmit signals. Basic components for pcb design and function | 8 | $0.00 | $0.00 | [Amazon](https://amazon.com) |
 | [VS1838B](https://amazon.com) | Receives the IR signals | 1 | $0.00 | $0.00 | [Amazon](https://amazon.com) |
 | **Parts subtotal** | — | — | — | **$5.90** | — |
-| **Tax & shipping** | — | — | — | **$16.37** | — |
-| **Total** | — | — | — | **$22.27** | — |
+| **Tax & shipping** | — | — | — | **$8.37** | — |
+| **Total** | — | — | — | **$14.27** | — |
 
-$7.73 left of the tier's funding.
+$15.73 left of the tier's funding.
