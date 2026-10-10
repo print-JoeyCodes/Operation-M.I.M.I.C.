@@ -16,7 +16,7 @@
 | [Capacitors, Resistors, Switches, Buttons, LEDs, LiPo battery, power regulator](https://DigiKey.com) | General components needed for project | 16 | $1.00 | $16.00 | [DigiKey](https://DigiKey.com) |
 | [PCB](https://jlcpcb.com) | Main thing I guess | 1 | $5.00 | $5.00 | [JLCPCB](https://jlcpcb.com) |
 | **Parts subtotal** | — | — | — | **$26.90** | — |
-| **Tax & shipping** | — | — | — | **$0.00** | — |
-| **Total** | — | — | — | **$26.90** | — |
+| **Tax & shipping** | — | — | — | **$0.10** | — |
+| **Total** | — | — | — | **$27.00** | — |
 
-$3.10 left of the tier's funding.
+$3.00 left of the tier's funding.
