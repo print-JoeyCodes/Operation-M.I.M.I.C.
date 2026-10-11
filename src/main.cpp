@@ -2,12 +2,15 @@
 #include <IRremote.hpp>
 
 
-const int IR_RECEIVE_PIN = 2;   // VS1838B OUT pin
-const int IR_SEND_PIN    = 3;   // IR LED driver (MUST be 3 on Uno)
+const int IR_RECEIVE_PIN = 2;
+const int IR_SEND_PIN = 3;
+const int STATUS_PIN = 7;
+const int BUTTON_PIN1 = 8;
+const int BUTTON_PIN2 = 9;
 
 
 
-uint16_t replayData[] = {1600, 750, 700, 800, 350, 450, 750, 400, 450, 750, 400, 800, 350, 800, 350, 850, 350, 400, 450, 350, 450, 350, 850, 350, 450, 350, 450, 350, 400, 400, 400, 800, 750, 400, 350, 450, 400, 800, 750, 750, 350};int replayLength = 0;   // Will be auto-calculated in setup()
+
 
 
 void setup() {
@@ -16,76 +19,123 @@ void setup() {
 
     IrReceiver.begin(IR_RECEIVE_PIN, ENABLE_LED_FEEDBACK);
     IrSender.begin(IR_SEND_PIN);
+    pinMode(STATUS_PIN, OUTPUT);
+    pinMode(BUTTON_PIN1, INPUT);
+    pinMode(BUTTON_PIN2, INPUT);
 
-    // Auto-calculate array length from whatever you pasted above
-    replayLength = sizeof(replayData) / sizeof(replayData[0]);
+    Serial.print("Operation M.I.M.I.C. INITIALIZED");
+    digitalWrite(STATUS_PIN, HIGH);
+    delay(1000);
+    digitalWrite(STATUS_PIN, LOW);
 
-    Serial.println();
-    Serial.println("==========================================");
-    Serial.println("   OPERATION M.I.M.I.C. — IR TOOL");
-    Serial.println("==========================================");
-    Serial.println("Commands:");
-    Serial.println("  Any key  -> Fire the replay array");
-    Serial.println("  'c'      -> Clear/re-arm receiver");
-    Serial.println();
-    Serial.print("Replay array loaded: ");
-    Serial.print(replayLength);
-    Serial.println(" entries");
-    Serial.println("------------------------------------------");
-    Serial.println("Point gun at receiver and pull trigger.");
-    Serial.println("==========================================");
-    Serial.println();
+}                           
+
+
+
+
+
+
+struct ButtonState {
+    bool state = LOW;
+    bool lastReading = LOW;
+    unsigned long lastTime = 0;
+    bool stableState = LOW;
+};
+
+ButtonState button1;
+ButtonState button2;
+
+int debounceDelay = 50;
+
+
+void buttonPress(int pin) {
+    ButtonState* button;
+    if(pin == BUTTON_PIN1) {
+        button = &button1;
+    }
+    else {
+        button = &button2;
+    }
+    bool reading = digitalRead(pin);
+    if(reading != button->lastReading) {
+        button->lastTime = millis();
+    }
+
+    if ((millis() - button->lastTime) > debounceDelay) {
+        if(reading != button->stableState){
+            button->stableState = reading;
+            if(button->stableState == HIGH) {
+                button->state = HIGH;
+            }
+            else {
+                button->state = LOW;
+            }
+        }
+    }
+    button->lastReading = reading;
 }
 
 
+int menuState = 0;
+bool printed = false;
+bool pressed = false;
+
 void loop() {
 
-    // ---------- CAPTURE MODE ----------
-    if (IrReceiver.decode()) {
+    buttonPress(BUTTON_PIN1);
+    buttonPress(BUTTON_PIN2);
 
-        // Print protocol info for diagnostics
-        Serial.print(">> Protocol: ");
-        Serial.print(IrReceiver.decodedIRData.protocol);
-        Serial.print(" | Bits: ");
-        Serial.print(IrReceiver.decodedIRData.rawlen);
-        Serial.println(" timings");
-
-        // Print the array in copy-paste-ready format
-        Serial.println();
-        Serial.println("--- COPY BELOW THIS LINE ---");
-        Serial.print("uint16_t replayData[] = {");
-        for (int i = 0; i < IrReceiver.decodedIRData.rawlen; i++) {
-            unsigned int duration = IrReceiver.irparams.rawbuf[i] * 50;
-            Serial.print(duration);
-            if (i < IrReceiver.decodedIRData.rawlen - 1) Serial.print(", ");
+    if(button1.state) {
+        if(!pressed){
+            pressed = true;
+            if (menuState > 1) {
+                menuState = 0;
+            }
+            else {
+                menuState++;
+            }
+            printed = false;
         }
-        Serial.println("};");
-        Serial.println("--- COPY ABOVE THIS LINE ---");
-        Serial.println();
+    }
+    else {
+        pressed = false;
+    }
 
-        // ALWAYS resume to clear buffer for next signal
+    if(menuState == 0 && !printed) {
+        Serial.println("MAIN MENU");
+        Serial.println("============");
+        Serial.println("-> Capture Signal");
+        Serial.println("Fire Signal");
+        Serial.println("Enter Storage");
+        Serial.println("");
+        printed = true;
+    }
+    else if (menuState == 1 && !printed) {
+        Serial.println("MAIN MENU");
+        Serial.println("============");
+        Serial.println("Capture Signal");
+        Serial.println("-> Fire Signal");
+        Serial.println("Enter Storage");
+        Serial.println("");
+        printed = true;
+    }
+    else if (menuState == 2 && !printed) {
+        Serial.println("MAIN MENU");
+        Serial.println("============");
+        Serial.println("Capture Signal");
+        Serial.println("Fire Signal");
+        Serial.println("-> Enter Storage");
+        Serial.println("");
+        printed = true;
+    }
+
+    // IR Receiver Gets Signal
+    if (IrReceiver.decode()) {
         IrReceiver.resume();
     }
 
-    // ---------- REPLAY MODE ----------
+    // Send IR Signal
     if (Serial.available()) {
-        char cmd = Serial.read();
 
-        // Clear any extra newline/carriage return characters
-        while (Serial.available()) Serial.read();
-
-        if (cmd == 'c' || cmd == 'C') {
-            Serial.println(">> Receiver re-armed.");
-            return;
-        }
-
-        // Fire the replay array
-        if (replayLength > 0 && replayData[0] != 0) {
-            Serial.println(">> FIRING DEATH RAY...");
-            IrSender.sendRaw(replayData, replayLength, 38);
-            Serial.println(">> Sent.");
-        } else {
-            Serial.println(">> No replay data loaded. Capture first, then paste into the sketch.");
-        }
     }
 }
