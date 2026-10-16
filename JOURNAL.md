@@ -4,7 +4,7 @@
 <!-- Generated: 2026-10-11T03:34:23.810Z -->
 
 > [!NOTE]
-> This devlog is mirrored from [Half Life](https://halflife.hackclub.com). Editing it here will not change the platform's copy, and the next sync overwrites this file.
+> This devlog is mirrored from [Half Life](https://halflife.hackclub.com) – [open the project](https://halflife.hackclub.com/projects/cmuv8zy4r0f0y01smbvco2i3d). Editing it here will not change the platform's copy, and the next sync overwrites this file.
 
 > Modulating Intercepted Master Infrared Codes A device that can capture and copy IR signals from laser guns and then deploys altered, more powerful versions to defeat enemies.
 

@@ -1,0 +1,6 @@
+Item,Qty,Supplier,Cost/item,Total Cost,link
+"I2C White 0.42"" inch OLED Display Module",1,BuyDisplay,$2.95,$2.95,https://www.buydisplay.com/i2c-white-0-42-inch-oled-display-module-72x40-arduino-raspberry-pi
+"Capacitors, Resistors, Switches, Buttons, LEDs, LiPo battery, power regulator",16,DigiKey,$1.00,$16.00,https://DigiKey.com
+PCB,1,JLCPCB,$2.00,$2.00,https://jlcpcb.com
+ESP32 Dev Board,1,ELEGOO,$0.00,$0.00,https://ELEGOO.com
+Estimated total shipping,1,,,$9.05,
