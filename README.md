@@ -11,6 +11,11 @@ With this PCB, I can create custom guns, and even a BASE that you can shoot and 
 
 ![alt text](<PCB design.png>)
 
+
+Flowchart for Code. 
+<img width="3024" height="4032" alt="image" src="https://github.com/user-attachments/assets/763822d7-fd18-4436-9bbb-2588aa373d0a" />
+
+
 For the BOM, parts listed with a price of $0 are because I had them on hand.
 
 |Item                             |Qty|Supplier|Cost/item|Total Cost|link                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
